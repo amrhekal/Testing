@@ -1,0 +1,205 @@
+/* Start Main Rules */
+body {
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* End Main Rules */
+/* Strat Fram Keys */
+
+/* @keyframes hours {
+  from {
+    transform: rotate(0deg) translate(-50%, -100%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -100%);
+  }
+}
+@keyframes minutes {
+  from {
+    transform: rotate(0deg) translate(-50%, -100%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -100%);
+  }
+}
+@keyframes seconds {
+  from {
+    transform: rotate(0) translate(-50%, -90%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -90%);
+  }
+} */
+/* End Fram Keys */
+/* Start My Watch */
+
+.watch {
+  position: relative;
+}
+
+/* End My Watch */
+
+/* Start Frames */
+
+.watch .frame-face {
+  position: relative;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.8) 0.5em 0.5em 4em;
+  display: flex;
+}
+.watch  .frame-layer1 {
+  width: 740px;
+  height: 740px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+      135deg,
+      rgba(246, 248, 249, 0) 0%,
+      rgba(229, 235, 238, 1) 50%,
+      rgba(205, 212, 217, 1) 51%,
+      rgba(245, 247, 249, 0) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(246, 248, 249, 1) 0%,
+      rgba(229, 235, 238, 1) 65%,
+      rgba(205, 212, 217, 1) 66%,
+      rgba(245, 247, 249, 1) 100%
+    );
+}
+.watch  .frame-layer2 {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0.2em 0.2em 1em;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
+  /* background: linear-gradient(to bottom, #fff, #ccc); */
+  background-image: url(../images/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 700px 700px;
+}
+.watch .center_circle1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #121314;
+}
+.watch .center_circle2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #c6c6c6;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(200, 200, 200, 0),
+    rgba(190, 190, 190, 1) 90%,
+    rgba(130, 130, 130, 1) 100%
+  );
+}
+
+/* End  Frames */
+/* Start Hands  Frames */
+
+.watch .hours-hand {
+  position: absolute;
+  height: 200px;
+  width: 20px;
+  background: #232425;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(200, 200, 200, 0),
+    rgb(0 0 0) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  box-shadow: #232425 0 0 2px;
+  border-radius: 10px;
+
+  /* animation: hours 43400s linear infinite; */
+}
+.watch .minutes-hand {
+  position: absolute;
+  height: 300px;
+  width: 20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(200, 200, 200, 0),
+    rgb(0 0 0) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  box-shadow: #232425 0 0 2px;
+  border-radius: 10px;
+  /* animation: minutes 3600s linear infinite; */
+}
+
+.watch .seconds-hand {
+  position: absolute;
+  width: 5px;
+  height: 300px;
+  background: #c00;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+  border-radius: 50px;
+  background: #c00;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.2em;
+    /* animation: seconds 60s linear infinite; */
+}
+.watch .seconds-hand:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: inherit;
+  left: 50%;
+  transform: translate(-50%, 720%);
+}
+
+.watch .seconds-hand:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.2em;
+  background: inherit;
+  left: 50%;
+  top: 108%;
+  transform: translate(-50%, -50%);
+}
+
+/* End  Hands  Frames */
